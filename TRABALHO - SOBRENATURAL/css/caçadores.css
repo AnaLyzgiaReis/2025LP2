@@ -1,0 +1,161 @@
+/* CSS dos caçadores - estilo igual ao principal */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #b30000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #b30000;
+}
+
+main {
+  padding: 40px 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo {
+  color: #b30000;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadein 2s;
+}
+
+.caçadores {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.caçadores a {
+  text-decoration: none;
+}
+
+.caçador {
+  display: flex;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #b30000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.caçador:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+.texto {
+  flex: 1;
+  color: #f2f2f2;
+}
+
+.caçador h3 {
+  color: #b30000;
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: left;
+}
+
+.caçador p {
+  font-style: italic;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.caçador ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.caçador li {
+  margin-bottom: 6px;
+}
+
+.imagem {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #b30000;
+  object-fit: cover;
+}
+
+footer {
+  color: #999;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.botao {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.botao a {
+  background-color: #b30000;
+  color: #fff;
+  padding: 12px 24px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b30000;
+  transition: all 0.4s ease;
+  animation: piscar 2s infinite;
+}
+
+.botao a:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+@keyframes piscar {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}

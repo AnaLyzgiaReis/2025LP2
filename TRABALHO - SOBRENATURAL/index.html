@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="imagens/Supernatural-Logo.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipe Supernatural</title>
+    <link rel="stylesheet" href="css/estrutura.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description"
+        content="Página inicial dos Irmãos Winchester, caçadores de demônios e criaturas sobrenaturais. Conheça nossa equipe e serviços." />
+    <meta name="keywords" content="Winchester, Irmãos, Caçadores, Sobrenatural, Demônios, Fantasmas, Serviços" />
+    <meta name="author" content="Irmãos Winchester" />
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <a class="onde" href="#index.html">Início</a>
+            <a href="caçadores.html">Caçadores</a>
+            <a href="contrate.html">Contratar</a>
+            <a href="empresa.html">Empresa</a>
+
+            <div class="search-container">
+                <form onsubmit="event.preventDefault(); alert('Pesquisa enviada!');">
+                    <input type="text" placeholder="Pesquisar..." name="search" />
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Equipe Supernatural</h1>
+            <p>"Nós salvamos pessoas. Caçamos coisas. O negócio da família."</p>
+        </div>
+
+        <div id="inicio" class="local">
+            <h2>Preguiça de mexer o dedo? Escolha uma seção e faremos isso para você</h2>
+            <ul>
+            <div class="g1">
+                <div>
+                    <li class="l1"><a href="#inicial">Esclarecimentos</a></li> <br />
+                    <li class="l1"><a href="#car">Frases</a></li> <br />
+                </div>
+
+                <div>
+                    
+                    <li class="l1"><a href="#avalia">Avaliações</a></li><br />
+                    <li class="l1"><a href="#cases">Casos</a></li> <br />
+                </div>
+                <div>
+                    
+                    <li><a href="#int">Contrato</a></li> <br />
+                    <li><a href="#rodape">Final</a></li> <br />
+                </div>
+
+            </div>
+            </ul>
+        </div>
+
+        <div id="inicial" class="bio">
+            <h3>O Que Nós Somos?</h3>
+            <h2>
+                Nós somos uma empresa responsável pela contratação de serviços que envolvam o meio sobrenatural,
+                contando com a presença de Dean Winchester, Sam Winchester e Bobby Singer, os caçadores de demônios mais
+                renomados e conhecidos
+            </h2>
+            <p>
+                Os Irmãos Winchester são pessoas "Sobrenaturais". Eles são caçadores de criaturas sobrenaturais, como
+                demônios, fantasmas e monstros, e viajam pelos Estados Unidos em um icônico Impala preto. Eles exploram
+                temas de família, sacrifício e o bem contra o mal.
+            </p>
+            <p>
+                Dean Winchester é o irmão mais velho, conhecido por sua bravura e lealdade. Sam Winchester é o irmão
+                mais
+                novo, inteligente e sensível, com habilidades psíquicas. Juntos, eles podem ajudar à enfrentar desafios
+                sobrenaturais por mais que tenham seus próprios problemas.
+            </p>
+            <p>
+                Bobby Singer é uma figura paterna para os irmãos, é um caçador experiente e cheio de sabedoria.
+            </p>
+            <p>
+                Existem outras pessoas que também trabalham com eles, como por exemplo Castiel, um anjo que se alia aos
+                irmãos, mas o foco é nos irmãos e em Bobby devido à experiência...
+            </p>
+            <h4>Tem interesse em contratar algum deles? Continue Rolando...</h4>
+        </div>
+
+        <div id="car" class="carrossel">
+            <div class="fala ativo">"O Motorista escolhe a música. O carona cala a boca" - Dean</div>
+            <div class="fala">"Você nunca desiste da família. Nunca" - Dean</div>
+            <div class="fala">"Eu não sou um monstro. Eu sou um caçador" - Sam</div>
+            <div class="fala">"A vida é curta, mas a morte é eterna" - Bobby</div>
+            <div class="fala">"A família é tudo. Sempre foi, sempre será" - Bobby</div>
+            <div class="fala">"A vida é feita de escolhas. Escolha sabiamente" - Sam</div>
+            <div class="fala">"A esperança é a última que morre" - Dean</div>
+            <div class="fala">"Às vezes você tem que fazer o que é melhor pra você, mesmo que isso magoe aqueles que
+                você
+                ame"
+                - Sam</div>
+            <div class="fala">"A vida é uma luta constante, mas juntos somos mais fortes" - Bobby</div>
+            <div class="fala">"Demônios, eu entendo. Pessoas são loucas" - Dean</div>
+        </div>
+        <div class="botoes">
+            <button onclick="mudarFala(-1)">◀</button>
+            <button onclick="mudarFala(1)">▶</button>
+        </div>
+
+        <script>
+            let indice = 0;
+            const falas = document.querySelectorAll('.fala');
+
+            function mostrarFala(n) {
+                falas.forEach(f => f.classList.remove('ativo'));
+                indice = (n + falas.length) % falas.length;
+                falas[indice].classList.add('ativo');
+            }
+
+            function mudarFala(direcao) {
+                mostrarFala(indice + direcao);
+            }
+
+            mostrarFala(0);
+            setInterval(() => mudarFala(1), 5000);
+        </script>
+
+        <div class="dados">
+            <h2>Faremos a seguir um questionário com você para entendermos de seus gostos e problemas</h2>
+            <form id="meuform" action="https://formspree.io/f/mzzgypaj" method="POST">
+                <br />
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+
+                <br />
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required />
+
+                <br />
+                <label for="problema">Descreva seu problema:</label>
+                <textarea id="problema" name="problema" rows="1" required></textarea>
+
+                <br />
+                <label for="preferencia">Preferência por:</label>
+                <select id="preferencia" name="preferencia">
+                    <option value="dean">Dean Winchester</option>
+                    <option value="sam">Sam Winchester</option>
+                    <option value="bobby">Bobby Singer</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <button id="botao" type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div id="avalia">
+            <section class="aval">
+                <h2 style="text-align: center; font-size: 30px;">Avaliações</h2>
+                <p style="text-align: center;">Veja o que nossos clientes dizem sobre nós:</p>
+                <div class="coment">
+                    <ul>
+                        <li>"Os Irmãos Winchester são incríveis! Dean enfrentou o fantasma, e Sam finalizou meu
+                            problema.
+                            Tudo em uma noite! 10/10!!!" <strong>- Cauã, Maranhão</strong></li>
+                        <li>"A equipe é muito profissional e dedicada. Recomendo! Uma pena é que ficaram muito pouco,
+                            nem vi
+                            eles sem camisa... 9/10" <strong>- Letícia, Uberlândia</strong></li>
+                        <li>"Bobby é um sábio caçador. Ele me ajudou a entender melhor o sobrenatural, entretanto os
+                            irmãos
+                            não estavam presentes. 8/10" <strong>- Cliente não-identificado</strong></li>
+                        <li>"Contratei os Irmãos Winchester para um caso complicado, queria exorcizar minha sogra, e
+                            eles me
+                            irritaram muito. Eles são rápidos e eficientes, mas não dá, in-su-por-tá-veis, vieram com
+                            uns
+                            papo de que ela tava normal sem demônio, é porquê não são eles que convivem né! 4/10"
+                            <strong>-
+                                Anônimo</strong>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div id="cases" class="geral">
+            <h2>Casos Resolvidos</h2>
+            <div class="grade">
+                <div class="card-caso">
+                    <img src="imagens/OIP (1).jpg" alt="Poltergeist de Uberaba" />
+                    <h3>Poltergeist de Uberaba</h3>
+                    <p class="resumo">Caos causado em uma fazenda afastada choca moradores.</p>
+
+                    <div class="detalhes" style="display: none;">
+                        <p>Moradores ouviram barulhos, portas batendo e objetos voando. Chamaram Dean e Sam, que
+                            descobriram
+                            que
+                            o poço no quintal era o local da manifestação. Um ritual com sal, fogo e água benta selou o
+                            espírito
+                            para sempre</p>
+                    </div>
+
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+                <div class="card-caso">
+                    <img src="imagens/OIP.jpg" alt="Demônio de São Paulo" />
+                    <h3>Demônio de São Paulo</h3>
+                    <p class="resumo">Um demônio que estava causando problemas em uma casa.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Uma família estava sendo atormentada por um demônio que se alimentava do medo. Dean e Sam
+                            realizaram um
+                            exorcismo, mas o demônio era mais forte do que o esperado. Com a ajuda de Bobby, eles
+                            conseguiram
+                            derrotá-lo e libertar a família.</p>
+                    </div>
+
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+
+                <div class="card-caso">
+                    <img src="imagens/baixados.webp" alt="Fantasma de Minas Gerais" />
+                    <h3>Rodovia 262</h3>
+                    <p class="resumo">Acontecimentos na rodovia que liga Minas Gerais ao Espírito Santo.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Carros estavam constantemente estragando na rodovia 262 sem explicações, causando acidentes.
+                            Dean
+                            e Sam
+                            descobriram que havia um fantasma de um motorista que morreu em um acidente há anos. Eles
+                            realizaram
+                            um ritual para libertar o espírito e restaurar a paz na rodovia, mas que, infelizmente, não
+                            durou
+                            muito tempo...</p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+                <div class="card-caso">
+                    <img src="imagens/OIP (2).jpg" alt="Lobisomem de Goiás" />
+                    <h3>Lobisomem de Goiás</h3>
+                    <p class="resumo">Um lobisomem que estava atacando pessoas em uma cidade pequena.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Um lobisomem estava atacando pessoas em uma cidade pequena. Dean e Sam descobriram que o
+                            lobisomem era
+                            na verdade um homem amaldiçoado por um antigo feitiço. Eles conseguiram reverter a maldição
+                            e
+                            salvar
+                            o homem, mas não sem antes enfrentar uma luta intensa.</p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+                <div class="card-caso">
+                    <img src="imagens/OIP.webp" alt="Vampiro de Curitiba" />
+                    <h3>Vampiro de Madureira</h3>
+                    <p class="resumo">Um vampiro que estava atacando pessoas em Madureira.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Um vampiro estava atacando pessoas em Madureira, se alimentando do sangue dos moradores. Dean
+                            e
+                            Sam
+                            descobriram que o vampiro era na verdade um antigo nobre que havia sido transformado em
+                            vampiro
+                            há
+                            séculos. Eles conseguiram derrotá-lo e libertar a cidade do terror.</p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+                <div class="card-caso">
+                    <img src="imagens/DEADLIEST-ZOMBIES-Planet-Terror.avif" alt="Zumbis de Brasília" />
+                    <h3>Zumbis de Brasília</h3>
+                    <p class="resumo">Uma infestação de zumbis causa pânico em Brasília inteira.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Uma infestação de zumbis estava causando pânico em Brasília. Dean e Sam descobriram que os
+                            zumbis
+                            eram na verdade pessoas infectadas por um vírus criado por um cientista louco. Eles
+                            conseguiram
+                            encontrar a cura e salvar a cidade, mas não sem antes enfrentar uma horda de zumbis
+                            famintos.
+                        </p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+                <div class="card-caso">
+                    <img src="imagens/OIP (3).jpg" alt="Caça às Bruxas de Salvador" />
+                    <h3>Caça às Bruxas de Salvador</h3>
+                    <p class="resumo">Uma caça às bruxas que estava acontecendo em Salvador.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Uma caça às bruxas estava acontecendo em Salvador, com pessoas sendo acusadas injustamente de
+                            bruxaria. Dean e Sam descobriram que a caça às bruxas era na verdade uma conspiração de um
+                            grupo
+                            de
+                            pessoas que queriam se livrar de seus inimigos. Eles conseguiram expor a verdade e salvar as
+                            pessoas
+                            inocentes, entretanto muitas pessoas normais morreram.</p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+
+                <div class="card-caso">
+                    <img src="imagens/fantasma.webp" alt="Aparição misteriosa em Patrocínio " />
+                    <h3>Aparição misteriosa em Patrocínio</h3>
+                    <p class="resumo">Fantasma foi avistado em um lugar no fim do mundo, choque total.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Moradores começaram a ouvir gritos e sinos de trem durante a madrugada, embora a estação
+                            estivesse desativada há décadas. Dean e Sam foram chamados após uma menina desaparecer perto
+                            dos trilhos. Descobriram que o espírito era de um antigo maquinista, vítima de sabotagem,
+                            que voltava em busca de vingança. Conseguiram libertar sua alma após encontrar os restos
+                            enterrados sob a plataforma antiga. A menina foi salva, mas até hoje, os sinos ainda tocam
+                            de vez em quando.</p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+
+                <div class="card-caso">
+                    <img src="imagens/dlskdlsd.jpg" alt="Separação em Patos" />
+                    <h3>Irmândade negativa em Patos</h3>
+                    <p class="resumo">Duas irmãs se desentendem por magia e se descontrolam.</p>
+                    <div class="detalhes" style="display: none;">
+                        <p>Clara e Isabel Bouvier eram inseparáveis, moravam em Patos, até que um artefato antigo herdado da avó revelou a
+                            verdade: apenas uma poderia controlar os poderes da linhagem. Isabel começou a adoecer
+                            misteriosamente. Clara, tomada por ambição e medo, realizou um ritual para absorver toda a
+                            energia vital da irmã. Quando Dean e Sam chegaram, Clara já estava possuída por uma entidade
+                            antiga ligada à família. Conseguiram exorcizá-la, mas o corpo de Isabel não resistiu. Clara
+                            foi levada, em estado catatônico, para uma instituição. Nunca mais falou uma palavra.</p>
+                    </div>
+                    <button class="ler" onclick="toggleDetalhes(this)">Ler mais</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script>
+            function toggleDetalhes(botao) {
+                const detalhes = botao.previousElementSibling;
+                const visivel = detalhes.style.display === 'block';
+                detalhes.style.display = visivel ? 'none' : 'block';
+                botao.textContent = visivel ? 'Ler mais' : 'Ler menos';
+            }
+        </script>
+
+        <div class="interesse" id="int">
+            <h1>FICOU INTERESSADO?</h1>
+            <p>Se você deseja contratar nossos serviços, preencha o formulário ou clique no botão abaixo:</p>
+            <h2>Estamos prontos para te ajudar!</h2>
+            <a href="contrate.html" class="botao-contratar">CONTRATAR</a>
+        </div>
+    </main>
+    <footer id="rodape">
+        <p style="text-align: center;">&copy; 2025 CyberCrew</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: 'Cinzel', serif;
+  color: #f2f2f2;
+}
+
+main {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #b30000;
+}
+
+main .formulario h2 {
+  color: #b30000;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+main form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+main form input[type="text"],
+main form input[type="email"],
+main form textarea,
+main form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #0d0d0d;
+  border: 2px solid #b30000;
+  border-radius: 6px;
+  color: #f2f2f2;
+  font-size: 16px;
+  font-family: 'Cinzel', serif;
+  transition: border-color 0.3s ease;
+}
+
+main form input[type="text"]:focus,
+main form input[type="email"]:focus,
+main form textarea:focus,
+main form select:focus {
+  border-color: #ff1a1a;
+  outline: none;
+}
+
+main form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #b30000;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+main form button:hover {
+  background-color: #ff1a1a;
+}
+
+footer {
+  text-align: center;
+  color: #999;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+}
+
+.botao {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.botao a {
+  background-color: #b30000;
+  color: #fff;
+  padding: 12px 24px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b30000;
+  transition: all 0.4s ease;
+  animation: piscar 2s infinite;
+}
+
+.botao a:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+@keyframes piscar {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}

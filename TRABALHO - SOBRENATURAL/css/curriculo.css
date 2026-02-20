@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: 'Cinzel', serif;
+  color: #f2f2f2;
+}
+
+
+.logo-container h1 {
+  color: #b30000;
+  font-size: 36px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff1a1a;
+}
+
+main {
+  padding: 30px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 36px;
+  color: #b30000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.principal {
+  margin: auto;
+  max-width: 1000px;
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #b30000;
+
+}
+
+.conteiner {
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  max-width: 620px;
+  margin-top: 15px;
+}
+
+.item2 {
+  margin-top: 40px;
+}
+
+.item2 p {
+  font-size: 12px;
+  text-indent: 1em;
+}
+
+.item3 {
+  text-indent: 6em;
+}
+
+#descriçao {
+  width: 257px;
+  margin: 10px;
+}
+
+#descriçao code {
+  margin-left: 20px;
+}
+
+.principal img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b30000;
+  margin-bottom: 8px;
+}
+
+.principal p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #f2f2f2;
+}
+
+.principal h4 {
+  margin-top: 30px;
+  margin-bottom: 12px;
+  text-indent: 3em;
+  color: #ff1a1a;
+}
+
+.principal ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #f2f2f2;
+  font-size: 14px;
+  text-align: left;
+}
+
+#comentario {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+}
+
+.botao {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.botao a {
+  margin: 0px 6%;
+  background-color: #b30000;
+  color: #fff;
+  padding: 12px 24px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b30000;
+  transition: all 0.4s ease;
+  animation: piscar 2s infinite;
+}
+
+.botao a:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+@keyframes piscar {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #b30000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #b30000;
+}
+
+.container {
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+.info h2,
+.membros h2,
+.contato-empresa h2 {
+  color: #e60000;
+  margin-top: 30px;
+}
+
+.info p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.membros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #b30000;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+.card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: block;
+  color: #e60000;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.card a:hover {
+  color: #ff1a1a;
+}
+
+.contato-empresa {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #141414;
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  border-top: 1px solid #333;
+  margin-top: 50px;
+}
+
+.voltar-inicio {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.voltar-inicio a {
+  background-color: #b30000;
+  color: #fff;
+  padding: 12px 24px;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b30000;
+  transition: all 0.4s ease;
+  animation: piscar 2s infinite;
+}
+
+.voltar-inicio a:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+@keyframes piscar {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+.email{
+  font-size: 15px;
+}

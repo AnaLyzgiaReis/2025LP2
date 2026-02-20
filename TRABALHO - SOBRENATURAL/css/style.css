@@ -1,0 +1,268 @@
+/* estilo principal do site CyberCrew */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.container {
+  
+  text-align: center;
+  padding: 40px;
+}
+.g1{
+  display: flex;
+  flex-direction: row;
+}
+
+.l1{
+  margin-right: 270px;
+}
+.container h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #b30000;
+  animation: fadein 2s;
+}
+
+.container p {
+  font-size: 20px;
+  font-style: italic;
+  animation: fadein 2s ease-in 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.local,
+.bio,
+.carrossel,
+.aval,
+.geral,
+.interesse {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #b30000;
+  animation: fadein 1s;
+}
+
+
+.local a {
+  color: #e60000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.local a:hover {
+  color: #ff1a1a;
+  text-decoration: underline;
+}
+
+.bio h2,
+.geral h2,
+.aval h2,
+.interesse h1 {
+  color: #e60000;
+  text-align: center;
+}
+
+.carrossel {
+  text-align: center;
+}
+
+.fala {
+  display: none;
+  font-style: italic;
+  font-size: 20px;
+  margin: 10px 0;
+  transition: opacity 0.5s;
+}
+
+.fala.ativo {
+  display: block;
+  animation: fadein 1s;
+}
+
+.botoes button {
+  background-color: #b30000;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.botoes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.botoes button:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.1);
+}
+
+.card-caso {
+  background-color: #262626;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s;
+}
+.card-caso p{
+  min-height: 50px;
+}
+
+.card-caso:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+.card-caso img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.ler{
+  margin-top: 10px;
+  background-color: #b30000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #0d0d0d;
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  border-top: 1px solid #333;
+}
+
+.dados {
+  display: none;
+}
+
+.aval ul li {
+  margin-bottom: 15px;
+  background-color: #262626;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #900;
+  list-style-type: none;
+}
+
+.links {
+  color: #e60000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: #ff1a1a;
+  text-decoration: underline;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff1a1a;
+}
+
+select,
+input,
+textarea {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #b30000;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+h3,
+h4 {
+  text-align: center;
+  color: #fff;
+}
+.interesse{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.interesse a {
+  
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #b30000;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  animation: piscar 1.5s infinite;
+
+}
+
+@keyframes piscar {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+
+.botoes button {
+  background-color: #b30000;
+  color: #fff;
+  font-size: 24px;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.botoes button:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.1);
+}
+
+
+
