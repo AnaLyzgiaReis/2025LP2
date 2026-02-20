@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+.conteudo-p1 {
+    background-color: rgb(207, 164, 247);
+    width: 500px;
+    display: flex;
+}
+
+.conteudo-p2 {
+    background-color: rgb(207, 164, 247);
+    width: 500px;
+    display: inline-block;
+}
+
+.interna1 {
+    background-color: rgb(152, 152, 255);
+    width: 500px;
+}
+
+.interna2 {
+    background-color: rgb(152, 152, 255);
+    width: 500px;
+}

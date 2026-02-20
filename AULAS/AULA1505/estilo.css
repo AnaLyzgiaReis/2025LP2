@@ -1,0 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
+h1{
+    color: rgb(17, 9, 133);
+    font-size: 60px;
+   font-family: "Underdog", sans-serif;
+   font-weight: 100;
+}
+div{
+    border: 2px solid rgb(44, 32, 206);
+    padding: 20px;
+    margin: 50px;
+}
